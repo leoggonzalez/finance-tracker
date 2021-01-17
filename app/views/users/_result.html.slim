@@ -1,0 +1,18 @@
+.results-block
+	= render 'layouts/messages'
+
+- if @stock
+	.card.card-header.results-block
+		.mr-1
+			strong 
+				| Symbol: 
+			span = @stock.ticker
+		.mr-1
+			strong 
+				| Name: 
+			span = @stock.name
+		.mr-1
+			strong 
+				| Last price: 
+			span = @stock.last_price
+	

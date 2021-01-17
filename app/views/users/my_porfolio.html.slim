@@ -1,0 +1,14 @@
+header.mb-5
+  h1 My porfolio
+
+.search-area
+  h3 Search stocks
+  = form_tag search_stock_path, remote: true, method: :get do
+    .form-group.row
+      .col-sm-9
+        = text_field_tag :stock, params[:stock], placeholder: 'Stock ticker symbol', autofocus: true, class: 'form-control form-control-lg'
+      .col-sm-3
+        = button_tag class: 'btn btn-success btn-lg icon' do
+          = fa_icon "search"
+
+#results
